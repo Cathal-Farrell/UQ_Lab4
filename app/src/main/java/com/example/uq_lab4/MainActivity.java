@@ -22,7 +22,13 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        replaceFragment(new RecipeFragment());
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.fragmentContainerView, new RecipeFragment());
+        if (findViewById(R.id.ingredientContainerView) != null) {
+            transaction.replace(R.id.ingredientContainerView, IngredientFragment.newInstance(0));
+        }
+        transaction.commit();
     }
 
     public void replaceFragment(Fragment fragment){
@@ -37,8 +43,14 @@ public class MainActivity extends AppCompatActivity {
     public void showIngredients(int recipeIndex) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.fragmentContainerView, IngredientFragment.newInstance(recipeIndex));
-        transaction.addToBackStack("recipes");
+
+        if (findViewById(R.id.ingredientContainerView) != null) {
+            transaction.replace(R.id.ingredientContainerView, IngredientFragment.newInstance(recipeIndex));
+        }
+        else {
+            transaction.replace(R.id.fragmentContainerView, IngredientFragment.newInstance(recipeIndex));
+            transaction.addToBackStack("recipes");
+        }
         transaction.commit();
     }
 }
