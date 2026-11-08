@@ -19,10 +19,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/darker_gray"
-            android:paddingTop="54sp"
-            android:paddingBottom="20sp"
+            android:paddingTop="30sp"
+            android:paddingBottom="30sp"
             android:text="Recipes"
             android:textAlignment="center"
+            android:textColor="#152378"
             android:textSize="24sp" />
 
         <androidx.fragment.app.FragmentContainerView

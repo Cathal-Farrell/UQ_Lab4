@@ -4,37 +4,37 @@
     android:layout_height="105dp">
 
     <TextView
-        android:layout_width="200dp"
         android:id="@+id/recipeName"
-        android:textSize="16sp"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:text="First Exam"
-        android:textColor="@color/black"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="20dp"
         android:maxLines="1"
-        android:layout_marginTop="15dp"
-        android:layout_height="wrap_content"/>
+        android:text="First Exam"
+        android:textColor="#009688"
+        android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/recipeDate"
+        android:id="@+id/recipeTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/recipeName"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="20dp"
         android:gravity="center"
         android:text="May 23, 2015"
         android:textSize="16sp"/>
 
     <TextView
-        android:id="@+id/recipeMessage"
+        android:id="@+id/recipeDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/recipeDate"
+        android:layout_below="@+id/recipeTime"
         android:layout_marginEnd="20dp"
         android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="20dp"
         android:gravity="center"
         android:text="Best Of Luck"
         android:textSize="16sp"/>

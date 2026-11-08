@@ -23,17 +23,22 @@ public class MainActivity extends AppCompatActivity {
         });
 
         replaceFragment(new RecipeFragment());
-
-
-
-        //replaceFragment(new IngredientFragment());
     }
 
-    private  void replaceFragment (Fragment fragment){
+    public void replaceFragment(Fragment fragment){
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         //replace the fragment in the container with the new fragment
         transaction.replace(R.id.fragmentContainerView, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
+
+    public void showIngredients(int recipeIndex) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        transaction.replace(R.id.fragmentContainerView, IngredientFragment.newInstance(recipeIndex));
+        transaction.addToBackStack("recipes");
         transaction.commit();
     }
 }

@@ -2,24 +2,24 @@ package com.example.uq_lab4;
 
 public class RecipeItem {
     private String name;
-    private String date;
-    private String message;
+    private String time;
+    private String desc;
 
-    public RecipeItem(String name, String date, String message) {
+    public RecipeItem(String name, String time, String desc) {
         this.name = name;
-        this.date = date;
-        this.message = message;
+        this.time = time;
+        this.desc = desc;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getDate() {
-        return date;
+    public String getTime() {
+        return time;
     }
 
-    public String getMessage() {
-        return message;
+    public String getDesc() {
+        return desc;
     }
 }
