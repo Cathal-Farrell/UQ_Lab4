@@ -2,36 +2,18 @@ package com.example.uq_lab4;
 
 public class IngredientItem {
     private String name;
-    private String date;
-    private String message;
-    private int image1;
-    private int image2;
+    private String method;
 
-    public IngredientItem(String name, String date, String message, int image1, int image2) {
+    public IngredientItem(String name, String method) {
         this.name = name;
-        this.date = date;
-        this.message = message;
-        this.image1 = image1;
-        this.image2 = image2;
+        this.method = method;
     }
 
     public String getName() {
         return name;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public int getImage1() {
-        return image1;
-    }
-
-    public int getImage2() {
-        return image2;
+    public String getMethod() {
+        return method;
     }
 }
